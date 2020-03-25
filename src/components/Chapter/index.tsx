@@ -13,7 +13,6 @@ function ChapterComponent({
 }
 const Chapter = styled(ChapterComponent)`
   flex: 1;
-  box-sizing: border-box;
 `;
 
 export default Chapter;

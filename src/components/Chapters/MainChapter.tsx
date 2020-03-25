@@ -32,8 +32,6 @@ const style = css`
     }
   `)}
 
-  height: 100vh;
-  max-height: 100vh;
   overflow: hidden;
 `;
 function MainChapter() {

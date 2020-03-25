@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Route, useLocation, useHistory } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,6 +24,7 @@ function Chapters({ chapters }: ChaptersProps) {
   const currentChapter = useSelector(
     (state: RootState) => state.Chapter.chapter
   );
+  const [deltaX, setDeltaX] = useState(0);
 
   const swipeableHandler = useSwipeable({
     onSwipedLeft: () => {
@@ -32,7 +33,15 @@ function Chapters({ chapters }: ChaptersProps) {
     },
     onSwipedRight: () => {
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
-    }
+    },
+    onSwiping: e => {
+      console.log(e.deltaX);
+      setDeltaX(e.deltaX);
+    },
+    onSwiped: () => {
+      setDeltaX(0);
+    },
+    trackMouse: true
   });
 
   useEffect(() => {
@@ -50,7 +59,14 @@ function Chapters({ chapters }: ChaptersProps) {
             <meta charSet="utf-8" />
             <title>{chapter.title}: EDCAN</title>
           </Helmet>
-          {chapter.component}
+          <div
+            className="contents"
+            style={{
+              transform: `translateX(${-deltaX}px)`
+            }}
+          >
+            {chapter.component}
+          </div>
         </Route>
       ))}
       <Navigator chapters={chapters} />
@@ -61,6 +77,12 @@ const ChaptersWrap = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  & > .contents {
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default Chapters;
