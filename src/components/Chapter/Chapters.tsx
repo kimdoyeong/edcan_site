@@ -27,11 +27,14 @@ function Chapters({ chapters }: ChaptersProps) {
   const [deltaX, setDeltaX] = useState(0);
 
   const swipeableHandler = useSwipeable({
-    onSwipedLeft: () => {
+    onSwipedLeft: (e) => {
+      if (e.absX < 150) return;
       currentChapter + 1 < chapters.length &&
         history.push(chapters[currentChapter + 1].url);
     },
-    onSwipedRight: () => {
+    onSwipedRight: (e) => {
+      if (e.absX < 150) return;
+
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
     },
     onSwiping: e => {
