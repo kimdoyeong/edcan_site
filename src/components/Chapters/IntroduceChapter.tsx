@@ -1,24 +1,26 @@
 import React from "react";
-import Chapter from "../Chapter";
 import { css } from "styled-components";
 
-const style = css`
-  overflow-y: auto;
+import image from "../../assets/image/edcan_crew.jpg";
+import Chapter from "../Chapter";
 
+const style = css`
   .contents {
     padding: 1.5em;
-    margin-bottom: 100px;
+    margin: auto;
+    max-width: 1280px;
   }
   .image {
     height: 50vh;
-    max-height: 300px;
-    background: gray;
+    background: url(${image}) no-repeat;
+    background-size: cover;
+    background-position-x: center;
   }
 `;
 function IntroduceChapter() {
   return (
     <Chapter boxStyle={style}>
-      <div className="image">이미지 들어갈 곳</div>
+      <div className="image" />
       <article className="contents">
         <h1>Hello, EDCAN</h1>
 
@@ -38,10 +40,7 @@ function IntroduceChapter() {
           EDCAN에서는 체계적인 <strong>유닛별 수업</strong>을 진행하여 다양한
           분야의 대회에서 수상하였고, 하나의 동아리라는 공동체 내에서{" "}
           <strong>서로 학습하고 공유하며 성장해 나가는 것을 목표로 활동</strong>
-          합니다. 현재 총 4개의 유닛에서 우리 동아리 출신의 졸업 선배님을
-          비롯하여 외부 강사를 초청하여 전문적인 수업을 진행하고 있습니다.
-          애플리케이션 수업과 동시에 동아리 내 팀 프로젝트를 진행하여 개발자와
-          디자이너가 함께 협업하여 활동할 수 있도록 하였습니다.
+          하고 있습니다.
         </p>
       </article>
     </Chapter>

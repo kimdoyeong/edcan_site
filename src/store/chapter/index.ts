@@ -21,6 +21,7 @@ export default function(state = initialState, action: ActionType): ChapterType {
   switch (action.type) {
     case CHAPTER_CHANGE:
       return {
+        ...state,
         chapter: action.payload
       };
     default:

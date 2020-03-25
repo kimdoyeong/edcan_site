@@ -12,7 +12,7 @@ function ChapterComponent({
   return <Box {...styleProps}>{children}</Box>;
 }
 const Chapter = styled(ChapterComponent)`
-  min-height: 100vh;
+  flex: 1;
   box-sizing: border-box;
 `;
 

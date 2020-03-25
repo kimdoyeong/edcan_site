@@ -36,6 +36,10 @@ function Chapters({ chapters }: ChaptersProps) {
     </ChaptersWrap>
   );
 }
-const ChaptersWrap = styled.div``;
+const ChaptersWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
 
 export default Chapters;

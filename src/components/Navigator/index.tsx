@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useSelector } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 import { Chapter } from "../Chapter/Chapters";
 import { RootState } from "../../store/reducers";
@@ -11,13 +11,14 @@ interface NavigatorProps {
 }
 function Navigator({ chapters }: NavigatorProps) {
   const [menu, setMenu] = useState(false);
-  const [hide, setHide] = useState(false);
 
   const currentPage = useSelector((state: RootState) => state.Chapter.chapter);
   const location = useLocation();
+  const history = useHistory();
 
   const closeListener = () => setMenu(false);
 
+  // 메뉴바 클릭 이펙트
   useEffect(() => {
     const removeListener = () =>
       window && window.removeEventListener("click", closeListener);
@@ -30,6 +31,27 @@ function Navigator({ chapters }: NavigatorProps) {
 
     return removeListener;
   }, [menu]);
+
+  // 키보드 이펙트
+  useEffect(() => {
+    const toPrev = () => {
+      if (!currentPage) return;
+      history.push(chapters[currentPage - 1].url);
+    };
+    const toNext = () => {
+      if (currentPage + 1 >= chapters.length) return;
+      history.push(chapters[currentPage + 1].url);
+    };
+    const listener = (e: KeyboardEvent) => {
+      if (e.keyCode === 37) toPrev();
+      if (e.keyCode === 39) toNext();
+      if (e.keyCode === 13) toNext();
+    };
+
+    window && window.addEventListener("keydown", listener);
+
+    return () => window && window.removeEventListener("keydown", listener);
+  }, [chapters, currentPage, history]);
   const chaptersMenu = chapters.map((chapter, i) => (
     <Link
       className={["chapter", chapter.url === location.pathname && "active"]
@@ -82,7 +104,7 @@ function Navigator({ chapters }: NavigatorProps) {
 }
 
 const NavigatorStyle = styled.nav`
-  position: fixed;
+  position: sticky;
   left: 0;
   right: 0;
   bottom: 0;

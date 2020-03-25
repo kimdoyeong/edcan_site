@@ -7,5 +7,12 @@ function darkMode(style: FlattenSimpleInterpolation) {
     }
   `;
 }
+export function isDarkMode() {
+  return (
+    window &&
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+}
 
 export default darkMode;
