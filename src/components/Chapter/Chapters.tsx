@@ -35,7 +35,6 @@ function Chapters({ chapters }: ChaptersProps) {
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
     },
     onSwiping: e => {
-      console.log(e.deltaX);
       setDeltaX(e.deltaX);
     },
     onSwiped: () => {
