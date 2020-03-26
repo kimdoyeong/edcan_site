@@ -28,12 +28,12 @@ function Chapters({ chapters }: ChaptersProps) {
 
   const swipeableHandler = useSwipeable({
     onSwipedLeft: (e) => {
-      if (e.absX < 150) return;
+      if (e.absX < 90) return;
       currentChapter + 1 < chapters.length &&
         history.push(chapters[currentChapter + 1].url);
     },
     onSwipedRight: (e) => {
-      if (e.absX < 150) return;
+      if (e.absX < 90) return;
 
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
     },
