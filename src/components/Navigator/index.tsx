@@ -87,7 +87,7 @@ function Navigator({ chapters }: NavigatorProps) {
             to={chapters[currentPage - 1].url}
             className="button pagination"
           >
-            &lt;
+            ◀
           </Link>
         )}
         {currentPage + 1 < chapters.length && (
@@ -95,7 +95,7 @@ function Navigator({ chapters }: NavigatorProps) {
             to={chapters[currentPage + 1].url}
             className="button pagination"
           >
-            &gt;
+            ▶
           </Link>
         )}
       </div>
@@ -112,7 +112,7 @@ const NavigatorStyle = styled.nav`
   border: 1px solid transparent;
   display: flex;
   box-sizing: border-box;
-  background: #ebebeb;
+  background: #f1f3f5;/*#ebebeb;*/
 
   .open {
     display: flex;
@@ -121,11 +121,11 @@ const NavigatorStyle = styled.nav`
     padding: 0 10px;
 
     .icon > div {
-      width: 45px;
-      height: 10px;
-      background: #666666;
+      width: 35px;/*45px;*/
+      height: 5px;/*10px*/
+      background: #495057;/*#666666;*/
       margin: 5px 0;
-      border-radius: 2.5px;
+      border-radius: 1.5px;/*2.5px;*/
       transition: background 0.5s;
     }
     :hover {
@@ -190,14 +190,17 @@ const NavigatorStyle = styled.nav`
     align-items: center;
 
     .count {
-      padding: 0 16px;
+      font-family: NanumSquare;
+      color: #495057;
+      font-weight:800;
+      padding: 0 12px;
     }
   }
   .button {
     transition: background 0.5s, color 0.5s;
     cursor: pointer;
     height: 100%;
-    color: inherit;
+    color: #495057;/*inherit;*/
     text-decoration: none;
     :hover {
       background: #455a64;
@@ -208,7 +211,7 @@ const NavigatorStyle = styled.nav`
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.2em;
+      font-size: 1em;/*1.2em;*/
     }
   }
 
