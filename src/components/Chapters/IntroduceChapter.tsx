@@ -9,6 +9,7 @@ const style = css`
     padding: 1.5em;
     margin: auto;
     max-width: 1280px;
+    font-size: 1.25em;
   }
   .image {
     height: 50vh;
