@@ -17,6 +17,8 @@ export interface Chapter {
 interface ChaptersProps {
   chapters: Chapter[];
 }
+
+const delta = 50;
 function Chapters({ chapters }: ChaptersProps) {
   const location = useLocation();
   const history = useHistory();
@@ -27,12 +29,12 @@ function Chapters({ chapters }: ChaptersProps) {
   const [deltaX, setDeltaX] = useState(0);
 
   const swipeableHandler = useSwipeable({
-    onSwipedLeft: (e) => {
+    onSwipedLeft: e => {
       if (e.absX < 90) return;
       currentChapter + 1 < chapters.length &&
         history.push(chapters[currentChapter + 1].url);
     },
-    onSwipedRight: (e) => {
+    onSwipedRight: e => {
       if (e.absX < 90) return;
 
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
@@ -43,7 +45,8 @@ function Chapters({ chapters }: ChaptersProps) {
     onSwiped: () => {
       setDeltaX(0);
     },
-    trackMouse: true
+    trackMouse: true,
+    delta
   });
 
   useEffect(() => {
@@ -64,7 +67,11 @@ function Chapters({ chapters }: ChaptersProps) {
           <div
             className="contents"
             style={{
-              transform: `translateX(${-deltaX}px)`
+              transform: `translateX(${-(deltaX !== 0
+                ? deltaX < 0
+                  ? deltaX + delta
+                  : deltaX - delta
+                : 0) * 1.5}px)`
             }}
           >
             {chapter.component}
