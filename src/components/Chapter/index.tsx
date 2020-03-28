@@ -13,6 +13,16 @@ function ChapterComponent({
 }
 const Chapter = styled(ChapterComponent)`
   flex: 1;
+  animation: fadeIn 1s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export default Chapter;
