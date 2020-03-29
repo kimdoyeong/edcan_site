@@ -191,7 +191,7 @@ const NavigatorStyle = styled.nav`
 
     .count {
       font-family: NanumSquare;
-      color: #495057;
+      
       font-weight:800;
       padding: 0 12px;
     }
@@ -218,7 +218,13 @@ const NavigatorStyle = styled.nav`
   ${darkMode(css`
     background: #2b2b2b;
     .open .icon > div {
-      background: #8a8a8a;
+      background: #ced4da;
+    }
+    .button{
+      color:#ced4da;
+    }
+    .count{
+      color:#ced4da;
     }
   `)}
 `;
