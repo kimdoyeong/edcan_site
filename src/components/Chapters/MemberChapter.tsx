@@ -8,26 +8,28 @@ import HDY from "../../assets/image/profile/황두영.jpg";
 import KDY from "../../assets/image/profile/김도영.png";
 import CJH from "../../assets/image/profile/신진혁.png";
 import LJN from "../../assets/image/profile/이제니.jpg";
+import KMH from "../../assets/image/profile/곽민혁.jpg";
+import CNY from "../../assets/image/profile/신나영.jpg";
 import Github from "../Icons/Github";
 
 const members = [
   {
     name: "정찬효",
-    position: "부장",
+    position: "부장, 개발자",
     introduce: "주석은 달게, 코드는 짜게",
     github: "https://github.com/roian6",
     image: JCH
   },
   {
     name: "황두영",
-    position: "부부장",
+    position: "부부장, 개발자",
     introduce: "넘어지면 다시 일어서서",
     github: "https://github.com/namecode12",
     image: HDY
   },
   {
     name: "김도영",
-    introduce: "망해라",
+    introduce: "망해라 (사이트 개발자)",
     position: "개발자",
     github: "https://github.com/kimdoyeong",
     image: KDY
@@ -53,6 +55,19 @@ const members = [
     position: "개발자",
 
     image: "https://http.cat/404"
+  },
+  {
+    name: "곽민혁",
+    introduce: "모션그래픽을 좋아하는 부원입니다",
+    position: "디자이너",
+    image: KMH
+  },
+  {
+    name: "신나영",
+    introduce: "갓디자뇨 꿈나무 ㅎ.ㅎ",
+    position: "디자이너",
+    blog: "https://blog.naver.com/ghhhjh",
+    image: CNY
   }
 ];
 function MemberChapter() {
@@ -80,6 +95,13 @@ function MemberChapter() {
                     rel="noopener noreferrer"
                   >
                     <Github width="30" />
+                  </a>
+                </div>
+              )}
+              {data.blog && (
+                <div className="blog">
+                  <a href={data.blog} target="_blank" rel="noopener noreferrer">
+                    블로그
                   </a>
                 </div>
               )}
@@ -136,10 +158,19 @@ const style = css`
         margin-top: 18px;
         font-size: 1.2em;
       }
-      .github {
+      .github,
+      .blog {
         display: block;
         margin-top: auto;
         padding: 8px 0;
+      }
+
+      .blog > a {
+        text-decoration: none;
+
+        ${darkMode(css`
+          color: #b5ceff;
+        `)}
       }
     }
   }

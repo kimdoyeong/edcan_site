@@ -5,7 +5,7 @@ import { css } from "styled-components";
 function PortfolioChapter() {
   return (
     <Chapter boxStyle={style}>
-      <article>
+      <article className="article">
         <h1>Portfolio</h1>
         <p>준비중</p>
       </article>
@@ -14,6 +14,8 @@ function PortfolioChapter() {
 }
 
 const style = css`
-  padding: 2em;
+  > .article {
+    padding: 3em 1.5em;
+  }
 `;
 export default PortfolioChapter;
