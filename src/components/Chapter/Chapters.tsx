@@ -60,6 +60,9 @@ function Chapters({ chapters }: ChaptersProps) {
       }
     });
   }, [location, chapters, dispatch]);
+  useEffect(() => {
+    window && window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <ChaptersWrap {...swipeableHandler}>
       {chapters.map((chapter, i) => (
