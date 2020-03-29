@@ -17,63 +17,63 @@ import job4 from "../../../assets/image/portfolio/2019job_4.jpg";
 const portfolioList = [
   {
     name: "아띠 (Atti)",
-    in: "김현우",
+    members: "김현우",
     prize: "모바일콘텐츠 개발대회 은상",
     description: "외국인 관광객을 위한 관광 정보앱",
     images: [Atti1, Atti2, Atti3, Atti4]
   },
   {
     name: "빌더즈",
-    in: "김도영, 신나영, 정찬효, 황두영",
+    members: "김도영, 신나영, 정찬효, 황두영",
     prize: "모바일콘텐츠 개발대회 동상",
     description: "대회, 공모전 출전을 위한 팀 빌딩 앱",
     images: [builders]
   },
   {
     name: "픽토체인",
-    in: "정찬효",
+    members: "정찬효",
     prize: "선린해커톤 금상",
     description: "현실 자물쇠 키체인 서비스",
     images: [piktochain]
   },
   {
     name: "한울",
-    in: "김민",
+    members: "김민",
     prize: "선린해커톤 은상",
     description: "다이어리를 통한 진로 분석, 추천 서비스",
     images: [hanul]
   },
   {
     name: "StuFlo",
-    in: "김현우, 표영우",
+    members: "김현우, 표영우",
     prize: "선린해커톤 동상",
     description: "흐름과 플로우를 통한 학습 서비스",
     images: [stuflo]
   },
   {
     name: "FlexiLearn",
-    in: "표영우",
+    members: "표영우",
     prize: "e-ICON 세계대회 '3rd Place Award' (APEC국제교육협력원장상)",
     description: "누구에게나 열려있는 통합교육 플랫폼",
     images: [flexilearn]
   },
   {
     name: "ForestSafe",
-    in: "김도영, 김현우, 송영범",
+    members: "김도영, 김현우, 송영범",
     prize: "IoT 아이디어 공모전 금상",
     description: "불법 벌목, 산불 감지를 위한 IoT 장비 및 서비스",
     images: [forestSafe]
   },
   {
     name: "위험감지 알림가방",
-    in: "이현재",
+    members: "이현재",
     prize: "WICO (세계발명창의대회) 금상",
     description: "위험을 감지해 방지하는 가방",
     images: [bag]
   },
   {
     name: "2019 고졸성공 취업 대박람회",
-    in: "김현우, 이정우, 정민서, 정찬효, 표영우",
+    members: "김현우, 이정우, 정민서, 정찬효, 표영우",
     prize: "동아리 경진대회 특별상",
     description: "IoT 및 앱 시연",
     images: [job1, job2, job3, job4]
