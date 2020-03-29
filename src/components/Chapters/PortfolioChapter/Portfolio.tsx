@@ -58,6 +58,9 @@ const Wrap = styled.div`
         color: #c7c7c7;
       `)}
     }
+    .members {
+      margin-bottom: 5px;
+    }
   }
 `;
 

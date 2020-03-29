@@ -40,6 +40,10 @@ function Chapters({ chapters }: ChaptersProps) {
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
     },
     onSwiping: e => {
+      if (e.absY > 30) {
+        setDeltaX(0);
+        return;
+      }
       setDeltaX(e.deltaX);
     },
     onSwiped: () => {
