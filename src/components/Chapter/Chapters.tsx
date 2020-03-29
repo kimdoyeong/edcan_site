@@ -36,10 +36,10 @@ function Chapters({ chapters }: ChaptersProps) {
     },
     onSwipedRight: e => {
       if (e.absX < 90) return;
-
       currentChapter - 1 >= 0 && history.push(chapters[currentChapter - 1].url);
     },
     onSwiping: e => {
+      if(e.absY>10) return;
       setDeltaX(e.deltaX);
     },
     onSwiped: () => {
@@ -62,7 +62,7 @@ function Chapters({ chapters }: ChaptersProps) {
         <Route path={chapter.url} exact key={i}>
           <Helmet>
             <meta charSet="utf-8" />
-            <title>{chapter.title}: EDCAN</title>
+            <title>{chapter.title}</title>
           </Helmet>
           <div
             className="contents"
