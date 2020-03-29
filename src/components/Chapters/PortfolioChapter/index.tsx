@@ -1,5 +1,5 @@
 import React from "react";
-import Chapter from "../Chapter";
+import Chapter from "../../Chapter";
 import { css } from "styled-components";
 
 function PortfolioChapter() {
