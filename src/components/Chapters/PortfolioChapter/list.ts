@@ -1,13 +1,12 @@
-import Atti1 from "../../../assets/image/portfolio/atti_1.jpg";
-import Atti2 from "../../../assets/image/portfolio/atti_2.jpg";
-import Atti3 from "../../../assets/image/portfolio/atti_3.jpg";
-import Atti4 from "../../../assets/image/portfolio/atti_4.jpg";
+import circles1 from "../../../assets/image/portfolio/circles_1.webp";
+import circles2 from "../../../assets/image/portfolio/circles_2.webp";
+import Atti from "../../../assets/image/portfolio/atti.webp";
 import builders from "../../../assets/image/portfolio/builders.jpg";
 import piktochain from "../../../assets/image/portfolio/piktochain.jpg";
 import hanul from "../../../assets/image/portfolio/hanul.jpg";
 import stuflo from "../../../assets/image/portfolio/stuflo.jpg";
 import flexilearn from "../../../assets/image/portfolio/flexilearn.jpg";
-import forestSafe from "../../../assets/image/portfolio/forestsafe.jpg";
+import forestKeeper from "../../../assets/image/portfolio/forestkeeper.jpg";
 import bag from "../../../assets/image/portfolio/bag.jpg";
 import job1 from "../../../assets/image/portfolio/2019job_1.jpg";
 import job2 from "../../../assets/image/portfolio/2019job_2.jpg";
@@ -16,11 +15,18 @@ import job4 from "../../../assets/image/portfolio/2019job_4.jpg";
 
 const portfolioList = [
   {
+    name: "circles.",
+    members: "김현우, 표영우, 김태양",
+    prize: "디지털콘텐츠 개발대회 대상",
+    description: "빠르고 편리한 통합 동아리 매니지먼트 솔루션",
+    images: [circles1, circles2]
+  },
+  {
     name: "아띠 (Atti)",
     members: "김현우",
     prize: "모바일콘텐츠 개발대회 은상",
     description: "외국인 관광객을 위한 관광 정보앱",
-    images: [Atti1, Atti2, Atti3, Atti4]
+    images: [Atti]
   },
   {
     name: "빌더즈",
@@ -58,11 +64,11 @@ const portfolioList = [
     images: [flexilearn]
   },
   {
-    name: "ForestSafe",
+    name: "ForestKeeper",
     members: "김도영, 김현우, 송영범",
     prize: "IoT 아이디어 공모전 금상",
     description: "불법 벌목, 산불 감지를 위한 IoT 장비 및 서비스",
-    images: [forestSafe]
+    images: [forestKeeper]
   },
   {
     name: "위험감지 알림가방",
@@ -72,10 +78,10 @@ const portfolioList = [
     images: [bag]
   },
   {
-    name: "2019 고졸성공 취업 대박람회",
+    name: "2019 고졸성공 취업대박람회",
     members: "김현우, 이정우, 정민서, 정찬효, 표영우",
     prize: "동아리 경진대회 특별상",
-    description: "IoT 및 앱 시연",
+    description: "IoT 장비를 이용한 체험 프로그램 운영 및 앱 시연",
     images: [job1, job2, job3, job4]
   }
 ];
