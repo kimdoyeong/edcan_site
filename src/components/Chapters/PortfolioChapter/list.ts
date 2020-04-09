@@ -6,7 +6,7 @@ import piktochain from "../../../assets/image/portfolio/piktochain.jpg";
 import hanul from "../../../assets/image/portfolio/hanul.jpg";
 import stuflo from "../../../assets/image/portfolio/stuflo.jpg";
 import flexilearn from "../../../assets/image/portfolio/flexilearn.jpg";
-import forestKeeper from "../../../assets/image/portfolio/forestkeeper.jpg";
+import forestKeeper from "../../../assets/image/portfolio/forestkeeper.webp";
 import bag from "../../../assets/image/portfolio/bag.jpg";
 import job1 from "../../../assets/image/portfolio/2019job_1.jpg";
 import job2 from "../../../assets/image/portfolio/2019job_2.jpg";
