@@ -3,6 +3,7 @@ import Chapter from "../Chapter";
 import edcanLogo from "../../assets/logo/edcan.svg";
 import { css } from "styled-components";
 import darkMode from "../../utils/style/darkMode";
+import { AButton } from "../UI/Button";
 
 const style = css`
   .logo {
@@ -22,6 +23,9 @@ const style = css`
   .slogan {
     color: #575757;
   }
+  .apply {
+    margin-top: 1em;
+  }
 
   ${darkMode(css`
     .title {
@@ -40,6 +44,9 @@ function MainChapter() {
       <img src={edcanLogo} alt="EDCAN Logo" className="logo" />
       <h1 className="title">EDCAN</h1>
       <p className="slogan">We create new mobile century on the planet.</p>
+      <div className="apply">
+        <AButton href="https://www.facebook.com/edcancircle">지원하기</AButton>
+      </div>
     </Chapter>
   );
 }
