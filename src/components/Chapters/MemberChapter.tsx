@@ -10,6 +10,8 @@ import CJH from "../../assets/image/profile/신진혁.png";
 import LJN from "../../assets/image/profile/이제니.jpg";
 import KMH from "../../assets/image/profile/곽민혁.jpg";
 import CNY from "../../assets/image/profile/신나영.jpg";
+import HMJ from "../../assets/image/profile/황민지.jpg";
+import YMH from "../../assets/image/profile/유명환.jpg";
 import Github from "../Icons/Github";
 
 const members = [
@@ -18,21 +20,21 @@ const members = [
     position: "부장, 개발자",
     introduce: "주석은 달게, 코드는 짜게",
     github: "https://github.com/roian6",
-    image: JCH
+    image: JCH,
   },
   {
     name: "황두영",
     position: "부부장, 개발자",
     introduce: "넘어지면 다시 일어서서",
     github: "https://github.com/namecode12",
-    image: HDY
+    image: HDY,
   },
   {
     name: "김도영",
     introduce: "망해라 (사이트 개발자)",
     position: "개발자",
     github: "https://github.com/kimdoyeong",
-    image: KDY
+    image: KDY,
   },
   {
     name: "신진혁",
@@ -40,35 +42,47 @@ const members = [
     position: "개발자",
 
     github: "https://github.com/sylvia3259",
-    image: CJH
+    image: CJH,
   },
   {
     name: "이제니",
     introduce: "집 가고 싶다",
     position: "개발자",
 
-    image: LJN
+    image: LJN,
   },
   {
     name: "조성현",
     introduce: "EDCAN 6기 개발자",
     position: "개발자",
-
-    image: "https://http.cat/404"
+    image: "https://http.cat/404",
+  },
+  {
+    name: "유명환",
+    introduce: "실력이 안되면 시간으로!",
+    position: "개발자",
+    image: YMH,
+    github: "https://github.com/famous0811",
   },
   {
     name: "곽민혁",
     introduce: "모션그래픽을 좋아하는 부원입니다",
     position: "디자이너",
-    image: KMH
+    image: KMH,
   },
   {
     name: "신나영",
     introduce: "갓디자뇨 꿈나무 ㅎ.ㅎ",
     position: "디자이너",
     blog: "https://blog.naver.com/ghhhjh",
-    image: CNY
-  }
+    image: CNY,
+  },
+  {
+    name: "황민지",
+    introduce: "해가 뜨기 전이 가장 어둡다",
+    position: "디자이너",
+    image: HMJ,
+  },
 ];
 function MemberChapter() {
   return (
