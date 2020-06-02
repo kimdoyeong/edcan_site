@@ -8,7 +8,6 @@ import HDY from "../../assets/image/profile/황두영.jpg";
 import KDY from "../../assets/image/profile/김도영.png";
 import CJH from "../../assets/image/profile/신진혁.png";
 import LJN from "../../assets/image/profile/이제니.jpg";
-import KMH from "../../assets/image/profile/곽민혁.jpg";
 import CNY from "../../assets/image/profile/신나영.jpg";
 import HMJ from "../../assets/image/profile/황민지.jpg";
 import YMH from "../../assets/image/profile/유명환.jpg";
