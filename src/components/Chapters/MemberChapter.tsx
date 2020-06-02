@@ -65,12 +65,6 @@ const members = [
     github: "https://github.com/famous0811",
   },
   {
-    name: "곽민혁",
-    introduce: "모션그래픽을 좋아하는 부원입니다",
-    position: "디자이너",
-    image: KMH,
-  },
-  {
     name: "신나영",
     introduce: "갓디자뇨 꿈나무 ㅎ.ㅎ",
     position: "디자이너",
