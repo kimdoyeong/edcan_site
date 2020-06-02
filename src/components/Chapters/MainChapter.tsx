@@ -55,7 +55,10 @@ function MainChapter() {
       <h1 className="title">EDCAN</h1>
       <p className="slogan">We create new mobile century on the planet.</p>
       <div className="buttons">
-        <AButton href="https://www.facebook.com/edcancircle" className="apply">
+        <AButton
+          href="https://m.facebook.com/story.php?story_fbid=2437810663189238&id=1409478239355824"
+          className="apply"
+        >
           지원하기
         </AButton>
         <AButton href="https://www.youtube.com/watch?v=91hmkywn4DQ&feature=youtu.be">
